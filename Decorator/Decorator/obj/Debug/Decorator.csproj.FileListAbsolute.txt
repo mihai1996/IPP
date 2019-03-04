@@ -1,0 +1,7 @@
+C:\c#\Decorator\Decorator\bin\Debug\Decorator.exe.config
+C:\c#\Decorator\Decorator\bin\Debug\Decorator.exe
+C:\c#\Decorator\Decorator\bin\Debug\Decorator.pdb
+C:\c#\Decorator\Decorator\obj\Debug\Decorator.csprojAssemblyReference.cache
+C:\c#\Decorator\Decorator\obj\Debug\Decorator.csproj.CoreCompileInputs.cache
+C:\c#\Decorator\Decorator\obj\Debug\Decorator.exe
+C:\c#\Decorator\Decorator\obj\Debug\Decorator.pdb

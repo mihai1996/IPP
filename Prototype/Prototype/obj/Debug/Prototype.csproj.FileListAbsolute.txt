@@ -1,0 +1,7 @@
+C:\c#\Prototype\Prototype\bin\Debug\Prototype.exe.config
+C:\c#\Prototype\Prototype\bin\Debug\Prototype.exe
+C:\c#\Prototype\Prototype\bin\Debug\Prototype.pdb
+C:\c#\Prototype\Prototype\obj\Debug\Prototype.csprojAssemblyReference.cache
+C:\c#\Prototype\Prototype\obj\Debug\Prototype.csproj.CoreCompileInputs.cache
+C:\c#\Prototype\Prototype\obj\Debug\Prototype.exe
+C:\c#\Prototype\Prototype\obj\Debug\Prototype.pdb
