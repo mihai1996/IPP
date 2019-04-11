@@ -1,74 +1,76 @@
-﻿<div class="header2" id="header">
-    <div class="header-logo-outs">
-        <div class="container-fluid">
-            <!--//navigation section -->
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="hedder-up ">
-                    <h1><a class="navbar-brand" href="/Home/index" data-aos="fade-right">EMF</a></h1>
-                </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent" data-aos="fade-left">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="/Home/About" class="nav-link">Despre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Home/Galerie" class="nav-link">Galerie</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Calculator/Calculator" class="nav-link">Calculator</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Auth/Login" class="nav-link">Login</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <!--//navigation section -->
-            <div class="clearfix"> </div>
+﻿@using EFitnessMonitoring.Models.DTO
+@model UserViewModel
+    <div class="header2" id="header">
+        <div class="header-logo-outs">
+            <div class="container-fluid">
+                <!--//navigation section -->
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="hedder-up ">
+                        <h1><a class="navbar-brand" href="/Home/index" data-aos="fade-right">EMF</a></h1>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent" data-aos="fade-left">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="/Home/About" class="nav-link">Despre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/Home/Galerie" class="nav-link">Galerie</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/Calculator/Calculator" class="nav-link">Calculator</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/Auth/Login" class="nav-link">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!--//navigation section -->
+                <div class="clearfix"> </div>
+            </div>
         </div>
     </div>
-</div>
-<!--Registration Form-->
-<br />
-<h1 class="mb-lg-5 mb-lg-4 mb-3" style="text-align: center;">Registrare</h1>
-<form action="" method="post">
-    <div class="field-outer">
-        <div class="regborder">
-            <input type="text" placeholder="UserName" required />
-            <i class="fas fa-user"></i>
+    <!--Registration Form-->
+    <br />
+    <h1 class="mb-lg-5 mb-lg-4 mb-3" style="text-align: center;">Registrare</h1>
+    <form action="/Auth/Registration" method="post">
+        <div class="field-outer">
+            <div class="regborder">
+                @Html.TextBoxFor(m => m.Username, new { placeholder = "UserName", required = "required" })
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="regborder">
+                @Html.TextBoxFor(m => m.Email, new { placeholder = "Email", required = "required" })
+                <i class="fas fa-at"></i>
+            </div>
+            <div class="regborder">
+                @Html.DropDownListFor(m => m.Gen, new List<SelectListItem>
+           {
+               new SelectListItem {Text = "masculin"},
+               new SelectListItem {Text = "feminin" }
+           })
+                <i class="fas fa-transgender"></i>
+            </div>
+            <div class="regborder">
+                @Html.TextBoxFor(m => m.Data, new { placeholder = "Virsta", required = "required" })
+                <i class="far fa-calendar-alt"></i>
+            </div>
+            <div class="regborder">
+                @Html.PasswordFor(m => m.Parola, new { placeholder = "Parola", required = "required" })
+                <i class="fas fa-unlock-alt"></i>
+            </div>
+            <div class="regborder">
+                @Html.PasswordFor(m => m.ConfirmPaorola, new { placeholder = "ConfirmParola", required = "required" })
+                <i class="fas fa-lock"></i>
+            </div>
+            <div>
+                <input class="btnreg1" type="submit" value="Registrare" />
+            </div>
         </div>
-        <div class="regborder">
-            <input type="email" placeholder="Email" required />
-            <i class="fas fa-at"></i>
-        </div>
-        <div class="regborder">
-            <select required>
-                <option value="Gen" selected>Gen</option>
-                <option value="Masculin">Masculin</option>
-                <option value="Feminin">Feminin</option>
-            </select>
-            <i class="fas fa-transgender"></i>
-        </div>
-        <div class="regborder">
-            <input type="date" required />
-            <i class="far fa-calendar-alt"></i>
-        </div>
-        <div class="regborder">
-            <input type="password" placeholder="Parola" required />
-            <i class="fas fa-unlock-alt"></i>
-        </div>
-        <div class="regborder">
-            <input type="password" placeholder="ConfirmParola" required />
-            <i class="fas fa-lock"></i>
-        </div>
-        <div >
-            <input class="btnreg1" type="submit" value="Registrare" />
-        </div>
-        </div>
-</form>
+    </form>
 
 
 

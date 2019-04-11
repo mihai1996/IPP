@@ -1,5 +1,7 @@
-﻿using System;
+﻿using EFitnessMonitoring.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -11,6 +13,7 @@ namespace EFitnessMonitoring
     {
         protected void Application_Start()
         {
+            //Database.SetInitializer(new UserDbInitializer());
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }

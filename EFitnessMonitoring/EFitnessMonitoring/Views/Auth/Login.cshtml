@@ -1,4 +1,7 @@
-﻿<div class="header2" id="header">
+﻿@using EFitnessMonitoring.Models.DTO
+@model UserViewModel
+
+<div class="header2" id="header">
     <div class="header-logo-outs">
         <div class="container-fluid">
             <!--//navigation section -->
@@ -34,22 +37,22 @@
 <!--Login Form-->
 <br />
 <h1 style="text-align:center;">Login</h1>
-<form action="" method="post">
+<form action="/Auth/Login" method="post">
     <div class="lb-outerContainer">
         <div class="borderlog">
-            <input type="text" placeholder="Username" required />
+            @Html.TextBoxFor(m => m.Username, new { placeholder = "Username", required = "required" })
             <i class="fas fa-user"></i>
         </div>
         <div class="borderlog">
-            <input type="password" placeholder="Password" required />
+            @Html.TextBoxFor(m => m.Parola, new { placeholder = "Parola", required = "required" })
             <i class="fas fa-lock"></i>
         </div>
         <div>
             <a class="btnreg" href="/Auth/Registration">Registration</a>
         </div>
-        <div >
-        <input class="btnlog" type="submit" value="Logare" />
-    </div>
+        <div>
+            <input class="btnlog" type="submit" value="Logare" />
+        </div>
     </div>
 </form>
 
